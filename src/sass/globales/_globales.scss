@@ -1,0 +1,23 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+@use "variables" as v;
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+ol,
+ul {
+  list-style: none;
+}
+body {
+  font-family: v.$fuente_principal;
+  background: linear-gradient(to top, #f2f7fa, #e2eaf4);
+}

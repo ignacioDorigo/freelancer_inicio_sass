@@ -1,0 +1,56 @@
+@use "../globales/mixins" as m;
+@use "../globales/variables" as v;
+
+.ubicacion-bg {
+  width: 100%;
+  height: 45rem;
+  background-image: url("../../src/img/hero.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+  }
+}
+.ubicacion__texto {
+  z-index: 99;
+  position: absolute;
+  text-align: center;
+  h2 {
+    color: v.$blanco;
+    font-size: 3rem;
+  }
+  .ubicacion_svg {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    p {
+      color: v.$blanco;
+      font-size: 1.5rem;
+      font-weight: regular;
+    }
+  }
+}
+.btn_contactar {
+  background-color: v.$verde;
+  color: v.$blanco;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-style: none;
+  font-size: 2rem;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}

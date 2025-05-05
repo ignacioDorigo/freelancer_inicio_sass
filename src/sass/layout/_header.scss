@@ -1,0 +1,10 @@
+@use "../globales/mixins" as m;
+@use "../globales/variables" as v;
+
+.header {
+  text-align: center;
+  font-size: 3rem;
+  .header__span {
+    font-size: 2rem;
+  }
+}

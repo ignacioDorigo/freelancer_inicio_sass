@@ -1,0 +1,22 @@
+{
+  "name": "freelancer_inicio_sass",
+  "version": "1.0.0",
+  "description": "Proyecto con HTML, CSS y SASS",
+  "keywords": [
+    "HTML",
+    "CSS",
+    "SASS"
+  ],
+  "license": "ISC",
+  "author": "Ignacio Dorigo",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.87.0"
+  }
+}

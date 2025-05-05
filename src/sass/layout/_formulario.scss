@@ -1,0 +1,52 @@
+@use "../globales/variables" as v;
+@use "../globales/mixins" as m;
+
+.formulario {
+  background-color: v.$gris;
+  width: min(60rem, 100%);
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  legend {
+    text-align: center;
+    color: v.$amarillo;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+}
+
+.div_campo {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  label {
+    color: v.$blanco;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  input,
+  textarea {
+    border: none;
+    padding: 1.5rem;
+    border-radius: 5px;
+    width: 100%;
+    resize: none;
+    font-size: 1.5rem;
+  }
+}
+
+.div__campo__doble {
+  @include m.tablet() {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    .div_campo {
+      width: 100%;
+    }
+  }
+}

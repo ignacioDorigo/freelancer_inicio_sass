@@ -1,0 +1,38 @@
+@use "../globales/mixins" as m;
+@use "../globales/variables" as v;
+
+.navegacion__bg {
+  background-color: v.$verde;
+}
+
+.navegacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include m.tablet() {
+    @include m.contenedor();
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  a {
+    text-align: center;
+    font-size: 2rem;
+    color: v.$blanco;
+    font-weight: bold;
+    padding: 1rem 1rem;
+    @include m.celular() {
+      display: inline-block;
+      width: 100%;
+    }
+    @include m.desktop() {
+      width: auto;
+    }
+
+    &:hover {
+      background-color: v.$amarillo;
+      color: v.$negro;
+    }
+  }
+}
